@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Earnings Clock",
+    "description": "Shows how much you have earned today above the composer, computed from your preset work hours and daily wage.",
+    "detail": "docs/DETAIL.md"
+  }
+}

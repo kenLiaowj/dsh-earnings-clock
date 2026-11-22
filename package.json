@@ -1,0 +1,55 @@
+{
+  "name": "dsh-earnings-clock",
+  "version": "1.0.0",
+  "description": "Shows today's earnings so far above the composer, from preset work hours and a daily wage, in Chinese and English and following the active theme.",
+  "type": "module",
+  "license": "MIT",
+  "author": "kenLiaowj",
+  "homepage": "https://github.com/kenLiaowj/dsh-earnings-clock#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenLiaowj/dsh-earnings-clock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kenLiaowj/dsh-earnings-clock/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "deepseek",
+    "earnings",
+    "salary",
+    "composer",
+    "ui"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
